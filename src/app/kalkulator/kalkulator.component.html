@@ -1,45 +1,82 @@
-<div class="row">
+ <div class="row">
 
   <div class="col-md-6">
     Kolumna 1
     <div class="card">
       <div class="card-header">
-        Proste obliczenia
+        Liczenie sumy 1...n
       </div>
       <div class="card-body">
         <form>
           <div class="form-group row">
-            <label for="liczba1" class="col-md-4 col-form-label">Liczba 1</label>
+            <label for="liczba1n" class="col-md-4 col-form-label">Liczba 1</label>
             <div class="col-md-8">
               <input type="text" class="form-control"
-                     id="liczba1"
-                     name="liczba1" placeholder="(podaj liczbę)"
-                     [(ngModel)]="liczbaA">
-
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="liczba2" class="col-md-4 col-form-label">Liczba 2</label>
-            <div class="col-md-8">
-              <input type="text" class="form-control"
-                     id="liczba2"
-                     name="liczba2" placeholder="(podaj liczbę)"
-                     [(ngModel)]="liczbaB">
+                     id="liczba1n"
+                     name="liczba1n" placeholder="(podaj liczbę)"
+                     [(ngModel)]="liczba1n">
 
             </div>
           </div>
 
+<p class="text-center">
+    <button class="btn btn-outline-info"
+            (click)="wynik1n = computeSum1n(liczba1n)"> LICZ SUME </button>
+</p>
       </form>
     </div>
     <div class="card-footer">
-      Wynik: {{wynik}}
+      Wynik: {{wynik1n}}
+
     </div>
   </div>
 </div>
 
+
+
+
+
+
 <div class="col-md-6">
-  Kolumna 2
+  Kolumna 1
+  <div class="card">
+    <div class="card-header">
+      Proste obliczenia
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="form-group row">
+          <label for="liczba1" class="col-md-4 col-form-label">Liczba 1</label>
+          <div class="col-md-8">
+            <input type="text" class="form-control"
+                   id="liczba1"
+                   name="liczba1" placeholder="(podaj liczbę)"
+                   [(ngModel)]="liczbaA">
+
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="liczba2" class="col-md-4 col-form-label">Liczba 2</label>
+          <div class="col-md-8">
+            <input type="text" class="form-control"
+                   id="liczba2"
+                   name="liczba2" placeholder="(podaj liczbę)"
+                   [(ngModel)]="liczbaB">
+
+          </div>
+        </div>
+        <p class="text-center">
+          <button class="btn btn-outline-info" (click)="computeSum()"> LICZ SUME </button>
+        </p>
+      </form>
+    </div>
+    <div class="card-footer">
+      Wynik: {{wynik}} <br>
+      NAJWIEKSZY KWADRAT:{{kwadrat}}
+    </div>
+  </div>
+</div>
 </div>
 
 
-</div>
+
